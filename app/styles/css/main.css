@@ -14,7 +14,8 @@ body > .wrap {
   margin: 0 auto; }
 
 body {
-  color: #555f67; }
+  color: #555f67;
+  background: url("../../images/comppattern2.png"); }
 
 .page-header {
   height: 116px;
@@ -109,7 +110,7 @@ body {
 
 .menu {
   background: #eff3f7;
-  border-radius: 2px;
+  border-radius: 4px;
   width: 250px;
   overflow: hidden; }
 
@@ -147,7 +148,7 @@ body {
 .contacts {
   width: 250px;
   margin-top: 21px;
-  border-radius: 2px;
+  border-radius: 4px;
   overflow: hidden;
   font-style: normal; }
 
@@ -201,8 +202,9 @@ body {
   background: #51daf8; }
 
 .block {
-  border-radius: 2px;
+  border-radius: 4px;
   overflow: hidden;
+  background: #eff3f7;
   width: 650px;
   float: right;
   font-family: fira_sansbook;
@@ -210,8 +212,14 @@ body {
   .block:last-child {
     margin-bottom: 40px; }
 
-.info--block {
+.info--block__experience {
   margin-left: 57px; }
+
+.info--block__general {
+  margin-left: 55px; }
+
+.info--block__education {
+  margin-left: 55px; }
 
 .general {
   min-height: 321px; }
@@ -246,12 +254,12 @@ body {
 .about {
   display: inline-block;
   float: left;
-  padding: 16px 0 0 21px; }
+  padding: 16px 0 0 22px; }
 
 .about--list__item__field {
   font-family: fira_sansmedium;
   font-size: 17px;
-  margin-right: 14px;
+  margin-right: 15px;
   line-height: 33px; }
 
 .about--list__item {
@@ -272,19 +280,23 @@ body {
   list-style: none; }
 
 .skill--item {
-  display: inline-block;
+  display: block;
+  float: left;
   color: white;
   background: -webkit-linear-gradient(90deg, #2e8ca1 0%, #2e8ca1 52%, #3ba8c0 53%, #3ba8c0 100%);
   background: linear-gradient(0deg, #2e8ca1 0%, #2e8ca1 52%, #3ba8c0 53%, #3ba8c0 100%);
   border-radius: 2px;
-  margin-right: 4px;
+  margin: 0 0px 8px 3px;
   overflow: hidden;
   font-family: ProximaNovaRegular;
   font-size: 12px;
-  padding: 3px 14px; }
+  padding: 3px 15px; }
 
 .experience__name,
 .experience__date,
+.education__name,
+.education__date,
+.education--list,
 .experience--list {
   padding: 0;
   margin: 0; }
@@ -293,21 +305,40 @@ body {
   list-style: none;
   padding-top: 26px; }
 
+.education--list {
+  list-style: none;
+  padding-top: 23px; }
+
 .experience--list__item {
   margin-bottom: 24px;
   padding-left: 67px;
   background: url("../../images/job_icon.png") left center no-repeat; }
 
-.experience__name {
+.experience__name,
+.education__name {
   line-height: 17px;
   font-family: fira_sansbook;
   font-size: 17px;
   margin-bottom: 4px; }
 
-.experience__date {
+.education__name {
+  margin-bottom: 6px; }
+
+.experience__date,
+.education__date {
   line-height: 15px;
   font-size: 15px;
   font-family: fira_sanslight; }
+
+.education--list__item {
+  margin-bottom: 24px;
+  padding-left: 68px; }
+
+.study {
+  background: url("../../images/study.png") left 20% no-repeat; }
+
+.course {
+  background: url("../../images/course.png") left 20% no-repeat; }
 
 .gradient--border {
   height: 3px; }
