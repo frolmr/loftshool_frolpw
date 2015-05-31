@@ -1,0 +1,54 @@
+$content_bckg: #eff3f7
+$hover: #3ba8c0
+$font_color: #555f67
+$menu_font_color: #959aa8
+$content: 960px
+$social_icon_size: 47px
+$header_height: 116px
+$footer_height: 77px
+
+
+html,
+body,
+.wrap
+	height: 100%
+body > .wrap
+	height: auto
+	min-height: 100%
+.content
+	padding-bottom: 77px
+	width: $content
+	margin: 0 auto
+body
+	color: $font_color
+	// background: url('../../images/comppattern2.png')
+@import header
+@import footer
+@import menu
+
+.gradient--border
+	height: 3px
+.gradient--border__left,
+.gradient--border__right
+	height: 100%
+	width: 50%
+	display: inline-block
+	float: left
+	background: linear-gradient(270deg, #1c667a, #e7eff3)
+.gradient--border__right
+	float: right
+	background: linear-gradient(90deg, #1c667a , #e7eff3)
+
+.cf:before,
+.cf:after 
+    content: " "
+    display: table
+
+.cf:after
+    clear: both
+
+.mockup-overlay
+	top: 0
+	position: absolute
+	z-index: -1
+	opacity: 0.4

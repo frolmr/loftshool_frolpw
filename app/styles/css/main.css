@@ -1,0 +1,169 @@
+html,
+body,
+.wrap {
+  height: 100%; }
+
+body > .wrap {
+  height: auto;
+  min-height: 100%; }
+
+.content {
+  padding-bottom: 77px;
+  width: 960px;
+  margin: 0 auto; }
+
+body {
+  color: #555f67; }
+
+header {
+  height: 116px; }
+
+.header__content {
+  width: 1200px;
+  margin: 0 auto; }
+
+.logo {
+  display: inline-block;
+  float: left;
+  padding-top: 39px; }
+
+.logo__image,
+.logo__title {
+  display: inline-block;
+  float: left; }
+
+.logo__title {
+  padding-left: 14px; }
+
+.social {
+  display: inline-block;
+  float: right;
+  padding-top: 35px; }
+
+.social__list {
+  float: right;
+  margin: 0; }
+
+.social__list--icon {
+  list-style: none;
+  float: left;
+  padding-left: 24px; }
+
+.social__list--icon--link {
+  width: 47px;
+  height: 47px;
+  float: left; }
+
+.vk {
+  background: url("../../images/vk.png") no-repeat; }
+  .vk:hover {
+    background-position: 0 -47px; }
+
+.twitter {
+  background: url("../../images/twitter.png") no-repeat; }
+  .twitter:hover {
+    background-position: 0 -47px; }
+
+.facebook {
+  background: url("../../images/facebook.png") no-repeat; }
+  .facebook:hover {
+    background-position: 0 -47px; }
+
+.github {
+  background: url("../../images/github.png") no-repeat; }
+  .github:hover {
+    background-position: 0 -47px; }
+
+footer {
+  position: relative;
+  margin-top: -77px;
+  height: 77px;
+  clear: both; }
+
+.footer__content {
+  width: 960px;
+  margin: 0 auto;
+  text-align: center; }
+
+.lock {
+  position: absolute;
+  top: 26px;
+  left: 251px;
+  height: 32px;
+  width: 20px;
+  background: url("../../images/lock.png") no-repeat; }
+  .lock:hover {
+    background-position: 0 -32px; }
+
+.copyright {
+  font-family: fira_sansextralight;
+  font-size: 13px;
+  height: 100%;
+  display: inline-block;
+  line-height: 77px;
+  vertical-align: middle; }
+
+.menu {
+  border-radius: 2px;
+  margin-top: 39px;
+  width: 250px; }
+
+.menu--item {
+  margin: 0; }
+
+.menu__item--link {
+  display: block;
+  color: #959aa8;
+  font-size: 21px;
+  font-family: fira_sansbook;
+  height: 50px;
+  margin: 0 10px;
+  padding: 21px 0 0 17px;
+  text-decoration: none;
+  border-bottom: 2px solid #3ba8c0; }
+  .menu__item--link:hover {
+    color: #3ba8c0; }
+  .menu__item--link:last-child {
+    border-bottom: none; }
+
+.active {
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  color: white;
+  font-size: 23px;
+  margin: 0;
+  padding-left: 27px;
+  background: #3ba8c0; }
+  .active:hover {
+    color: white; }
+
+.gradient--border {
+  height: 3px; }
+
+.gradient--border__left,
+.gradient--border__right {
+  height: 100%;
+  width: 50%;
+  display: inline-block;
+  float: left;
+  background: -webkit-linear-gradient(180deg, #1c667a, #e7eff3);
+  background: linear-gradient(270deg, #1c667a, #e7eff3); }
+
+.gradient--border__right {
+  float: right;
+  background: -webkit-linear-gradient(0deg, #1c667a, #e7eff3);
+  background: linear-gradient(90deg, #1c667a, #e7eff3); }
+
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table; }
+
+.cf:after {
+  clear: both; }
+
+.mockup-overlay {
+  top: 0;
+  position: absolute;
+  z-index: -1;
+  opacity: 0.4; }

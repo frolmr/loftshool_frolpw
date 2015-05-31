@@ -1,0 +1,37 @@
+$social__icons: vk twitter facebook github
+header
+	height: $header_height
+	// background-color: $content_bckg
+.header__content
+	width: 1200px
+	margin: 0 auto
+.logo
+	display: inline-block
+	float: left
+	padding-top: 39px
+.logo__image,
+.logo__title
+	display: inline-block
+	float: left
+.logo__title
+	padding-left: 14px
+.social
+	display: inline-block
+	float: right
+	padding-top: 35px
+.social__list
+	float: right
+	margin: 0
+.social__list--icon
+	list-style: none
+	float: left
+	padding-left: 24px
+.social__list--icon--link
+	width: $social_icon_size
+	height: $social_icon_size
+	float: left
+@each $icon in $social__icons
+	.#{$icon}
+		background: url('../../images/#{$icon}.png') no-repeat
+		&:hover
+			background-position: 0 -47px
