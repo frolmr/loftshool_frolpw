@@ -6,6 +6,7 @@ $contacts_header: #3ba8c0
 $mail: #41b9d4
 $phone: #48cbe8
 $skype: #51daf8
+$block: 650px
 $content: 960px
 $social_icon_size: 47px
 $header_height: 116px
@@ -21,6 +22,7 @@ body > .wrap
 	height: auto
 	min-height: 100%
 .content
+	padding-top: 39px
 	padding-bottom: 77px
 	width: $content
 	margin: 0 auto
@@ -31,6 +33,7 @@ body
 @import footer
 @import menu
 @import contacts
+@import block
 
 .gradient--border
 	height: 3px
@@ -44,6 +47,10 @@ body
 .gradient--border__right
 	float: right
 	background: linear-gradient(90deg, #1c667a , #e7eff3)
+.sidebar
+	width: $side_elements_width
+	display: inline-block
+	float: left
 
 .cf:before,
 .cf:after 
