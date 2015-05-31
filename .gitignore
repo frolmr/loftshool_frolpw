@@ -1,4 +1,5 @@
 layout
+dist
 node_modules
 .tmp
 .sass-cache
