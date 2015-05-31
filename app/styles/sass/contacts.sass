@@ -1,0 +1,41 @@
+$contacts: mail phone skype
+.contacts
+	width: $side_elements_width
+	margin-top: 21px
+	border-radius: 2px
+	overflow: hidden
+.contacts--header
+	margin: 0
+	padding: 10px 0 0px 20px
+	font-family: fira_sansbook
+	font-size: 21px
+	color: white
+	background: $contacts_header
+.contacts--type
+	margin: 0
+	padding: 0
+.contacts__item
+	list-style: none
+.contacts__item--link
+	text-decoration: none
+	display: block
+	width: 100%
+	color: white
+	font-family: fira_sansbook
+	font-size: 17px
+	display: inline-block
+	padding-left: 42px
+	line-height: 40px
+	&:hover
+		text-decoration: underline
+.contacts__item--link__wrap
+	padding-left: 40px
+@each $contact in $contacts
+ .#{$contact}
+ 	background: url('../../images/#{$contact}.png') no-repeat left center
+.mail_link
+	background: $mail
+.phone_link
+	background: $phone
+.skype_link
+	background: $skype
