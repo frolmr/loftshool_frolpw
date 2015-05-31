@@ -3,8 +3,12 @@
 	border-radius: 2px
 	margin-top: 39px
 	width: 250px
-.menu--item
+	overflow: hidden
+.menu--list
 	margin: 0
+	padding: 0
+.menu--list__item
+	list-style: none
 .menu__item--link
 	display: block
 	color: $menu_font_color
@@ -12,20 +16,18 @@
 	font-family: fira_sansbook
 	height: 50px
 	margin: 0 10px
-	padding: 21px 0 0 17px
+	padding: 23px 0 0 7px
 	text-decoration: none
-	border-bottom: 2px solid $hover
 	&:hover
 		color: $hover
-	&:last-child
-		border-bottom: none
+.menu__item--wrap
+	margin: -2px 10px
+	border-bottom: 2px solid $hover
 .active
-	border-top-left-radius: 2px
-	border-top-right-radius: 2px
-	color: white
-	font-size: 23px
 	margin: 0
-	padding-left: 27px
 	background: $hover
+	.menu__item--link
+		color: white
+		font-size: 23px
 	&:hover
 		color: white
