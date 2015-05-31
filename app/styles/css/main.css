@@ -80,7 +80,6 @@ body {
 
 .page-footer {
   position: relative;
-  margin-top: -77px;
   height: 77px;
   clear: both;
   background: #eff3f7; }
@@ -91,18 +90,21 @@ body {
   text-align: center; }
 
 .lock {
-  position: absolute;
-  top: 26px;
-  left: 251px;
+  display: block;
+  float: left;
+  clear: both;
+  margin: 23px 0 0 31px;
   height: 32px;
   width: 20px;
-  background: url("../../images/lock.png") no-repeat; }
+  background: url("../../images/lock.png") no-repeat;
+  text-indent: -9999px; }
   .lock:hover {
     background-position: 0 -32px; }
 
 .copyright {
   font-family: fira_sansextralight;
   font-size: 13px;
+  padding-right: 50px;
   height: 100%;
   display: inline-block;
   line-height: 77px;
