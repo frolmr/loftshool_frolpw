@@ -21,6 +21,7 @@ var paths = {
   html: ['app/*.html']
 }
 
+gulp.task('production', ['bower', 'sass', 'html', 'images', 'fav', 'fonts'])
 gulp.task('default', ['bower', 'sass', 'html', 'images', 'fav', 'fonts', 'watch']);
 gulp.task('clean', function(){
   gulp.src('dist', {
