@@ -28,8 +28,124 @@ body > .wrap
 	margin: 0 auto
 body
 	color: $font_color
-	background: url('../images/comppattern2.png')
+	// background: url('../images/comppattern2.png')
+
+.contact
+	display: inline-block
+	margin-left: 60px
+	border-radius: 5px
+	overflow: hidden
+	width: 650px
+	height: 840px
+	// background: $content_bckg
+.contact__header
+	height: 138px
+	// background: #67dffa
+.contact__header--inner
+	height: 121px
+	// background: $phone
+.contact__header--inner--header
+	margin: 0
+	padding-top: 3px
+	padding-right: 7px
+	letter-spacing: 0.2px
+	color: white
+	font-family: fira_sansextralight
+	font-size: 27px
+	line-height: 121px
+	text-align: center
+.contact__form
+	width: 402px
+	margin: 0 auto
+	padding-top: 41px
+.contact__form--name,
+.contact__form--email
+	display: inline-block
+.contact__form--email
+	margin-left: 18px
+.contact__form--header
+	margin: 0
+	font-family: fira_sanslight
+	font-size: 19px
+	color: $menu_font_color
+.contact__form--input
+	line-height: 36px
+	width: 181px
+	height: 36px
+	background: none
+	padding-left: 8px
+	border: 1px solid $phone
+	border-radius: 3px
+	font-size: 13px
+	&::-webkit-input-placeholder 
+		font-family: fira_sanslight
+		font-size: 13px
+		color: #48cbe8
+	&::-moz-placeholder
+		font-family: fira_sanslight
+		font-size: 13px
+		color: #48cbe8
+	&:-moz-placeholder
+		font-family: fira_sanslight
+		font-size: 13px
+		color: #48cbe8
+	&:-ms-input-placeholder
+		font-family: fira_sanslight
+		font-size: 13px
+		color: #48cbe8
+.contact__form--input-email
+	&::-webkit-input-placeholder 
+		font-family: fira_sanslight
+		font-size: 12px
+		color: #48cbe8
+	&::-moz-placeholder
+		font-family: fira_sanslight
+		font-size: 12px
+		color: #48cbe8
+	&:-moz-placeholder
+		font-family: fira_sanslight
+		font-size: 12px
+		color: #48cbe8
+	&:-ms-input-placeholder
+		font-family: fira_sanslight
+		font-size: 12px
+		color: #48cbe8
+.contact__form--message
+	padding-top: 10px
+.contact__form--text
+	background: none
+	border: 1px solid $phone
+	border-radius: 3px
+	width: 390px
+	height: 170px
+	padding-top: 8px
+	padding-left: 8px
+	resize: none
+	font-size: 13px
+	&::-webkit-input-placeholder 
+		font-family: fira_sanslight
+		font-size: 13px
+		color: #48cbe8
+	&::-moz-placeholder
+		font-family: fira_sanslight
+		font-size: 13px
+		color: #48cbe8
+	&:-moz-placeholder
+		font-family: fira_sanslight
+		font-size: 13px
+		color: #48cbe8
+	&:-ms-input-placeholder
+		font-family: fira_sanslight
+		font-size: 13px
+		color: #48cbe8
+.contact__form--code-header
+	margin: 0
+	margin-top: 9px
+	color: $menu_font_color
+	font-family: fira_sanslight
+	font-size: 17px
 	
+
 @import header
 @import footer
 @import menu
