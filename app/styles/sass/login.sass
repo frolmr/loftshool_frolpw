@@ -1,0 +1,166 @@
+$content_bckg: #eff3f7
+$hover: #3ba8c0
+$font_color: #555f67
+$menu_font_color: #959aa8
+$contacts_header: #3ba8c0
+$mail: #41b9d4
+$phone: #48cbe8
+$skype: #51daf8
+$block: 650px
+$content: 960px
+$social_icon_size: 47px
+$header_height: 116px
+$footer_height: 77px
+$side_elements_width: 250px
+
+html,
+body,
+	margin: 0
+	padding: 0
+	border: 0
+	height: 100%
+	font-family: fira_sansextralight
+	background: url('../images/comppattern2.png')
+.container
+	height: 100%
+	min-height: 100%
+	display: table
+	border: 0px
+	padding: 0px
+	margin: 0px
+	margin-top: -80px
+	width: 100% 
+.wrap
+	z-index: 1
+	position: relative
+	vertical-align: middle
+	display: table-cell
+	padding-top: 80px
+.entrance
+	width: 590px
+	height: 484px
+	overflow: hidden
+	background: $phone
+	margin: 0 auto
+	border-radius: 5px
+	box-shadow: 0px 4px 6.86px 0.14px rgba(13, 16, 7, 0.29)
+.entrance__authorize
+	height: 92px
+.entrance__authorize--header
+	padding-top: 2px
+	letter-spacing: 0.5px
+	line-height: 92px
+	text-align: center
+	margin: 0
+	font-size: 40px
+	color: white
+.entrance__divider
+	height: 15px
+	background: #67dffa
+.entrance__form
+	height: 377px
+	background: $content_bckg
+.pass__title--header,
+.login__title--header
+	margin: 0
+	color: $menu_font_color
+	text-align: center
+	font-size: 36px
+	padding-top: 15px
+.pass__title--header
+	padding-top: 12px
+.login__field
+	margin-top: 3px
+.pass__field
+	margin-top: 1px
+.pass__field--input,
+.login__field--input
+	display: block
+	margin: 0 auto
+	width: 404px
+	height: 58px
+	border: 1px solid $phone
+	border-radius: 4px
+	// background: none
+	padding-left: 17px
+	font-size: 17px
+	&::-webkit-input-placeholder 
+		color: #48cbe8
+	&::-moz-placeholder
+		color: #48cbe8
+	&:-moz-placeholder
+		color: #48cbe8
+	&:-ms-input-placeholder
+		color: #48cbe8
+.account-enter
+	display: block
+	width: 226px
+	height: 50px
+	background: $phone
+	border-radius: 8px
+	border: none
+	font-size: 36px
+	line-height: 36px
+	color: white
+.account-enter__shadow
+	background: $contacts_header
+	width: 226px
+	margin: 0 auto
+	border-radius: 8px
+	padding-bottom: 4px
+	margin-top: 34px
+
+.page-footer
+	position: relative
+	z-index: 3
+	height: 80px
+	background: $content_bckg
+.footer__content
+	width: $content
+	margin: 0 auto
+	text-align: center
+.lock
+	display: block
+	float: left
+	clear: both
+	margin: 23px 0 0 31px
+	height: 32px
+	width: 20px
+	background: url('../images/lock.png') no-repeat
+	text-indent: -9999px
+	&:hover
+		background-position: 0 -32px
+.copyright
+	font-size: 13px
+	padding-right: 50px
+	height: 100%
+	display: inline-block
+	line-height: $footer_height
+	vertical-align: middle
+
+.gradient--border
+	height: 3px
+.gradient--border__left,
+.gradient--border__right
+	height: 100%
+	width: 50%
+	display: inline-block
+	float: left
+	background: linear-gradient(270deg, #1c667a, #e7eff3)
+.gradient--border__right
+	float: right
+	background: linear-gradient(90deg, #1c667a , #e7eff3)
+
+.cf:before,
+.cf:after 
+    content: " "
+    display: table
+
+.cf:after
+    clear: both
+
+.mockup-overlay
+	top: 0
+	position: absolute
+	z-index: -1
+	opacity: 0.4

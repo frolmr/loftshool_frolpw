@@ -17,7 +17,10 @@ var paths = {
   images: ['app/images/*.*'],
   fonts: ['app/fonts/**'],
   fav: ['app/favicon.png'],
-  sass: ['app/styles/sass/main.sass'],
+  sass: ['app/styles/sass/main.sass',
+        'app/styles/sass/contact.sass',
+        'app/styles/sass/portfolio.sass',
+        'app/styles/sass/login.sass'],
   html: ['app/*.html']
 }
 
@@ -70,7 +73,7 @@ gulp.task('fonts', function(){
 gulp.task('watch', function(){
   livereload.listen();
   gulp.watch('app/styles/sass/*.sass', ['sass']).on('change', livereload.changed);
-  gulp.watch('app/*.html').on('change', livereload.changed);
+  gulp.watch('app/*.html', ['html']).on('change', livereload.changed);
 });
 
 gulp.task('bower', function () {
