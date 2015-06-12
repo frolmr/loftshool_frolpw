@@ -28,7 +28,7 @@ body > .wrap
 	margin: 0 auto
 body
 	color: $font_color
-	// background: url('../images/comppattern2.png')
+	background: url('../images/comppattern2.png')
 
 .contact
 	display: inline-block
@@ -37,13 +37,13 @@ body
 	overflow: hidden
 	width: 650px
 	height: 840px
-	// background: $content_bckg
+	background: $content_bckg
 .contact__header
 	height: 138px
-	// background: #67dffa
+	background: #67dffa
 .contact__header--inner
 	height: 121px
-	// background: $phone
+	background: $phone
 .contact__header--inner--header
 	margin: 0
 	padding-top: 3px
@@ -72,7 +72,6 @@ body
 	line-height: 36px
 	width: 181px
 	height: 36px
-	background: none
 	padding-left: 8px
 	border: 1px solid $phone
 	border-radius: 3px
@@ -113,7 +112,6 @@ body
 .contact__form--message
 	padding-top: 10px
 .contact__form--text
-	background: none
 	border: 1px solid $phone
 	border-radius: 3px
 	width: 390px
@@ -141,10 +139,74 @@ body
 .contact__form--code-header
 	margin: 0
 	margin-top: 9px
+	margin-bottom: -2px
 	color: $menu_font_color
 	font-family: fira_sanslight
 	font-size: 17px
-	
+.contact__form--captcha	
+	display: inline-block
+	width: 189px
+	height: 77px
+	border: 1px solid $phone
+	border-radius: 4px
+	background: white url('../images/captcha.png') no-repeat 14px 17px
+.contact__form--code-field
+	font-size: 13px
+	display: inline-block
+	margin-left: 19px
+	margin-top: 20px
+	padding-left: 8px
+	width: 180px
+	height: 28px
+	line-height: 28px
+	position: absolute
+	border: 1px solid $phone
+	border-radius: 2px
+	&::-webkit-input-placeholder 
+		font-family: fira_sanslight
+		font-size: 13px
+		color: #48cbe8
+	&::-moz-placeholder
+		font-family: fira_sanslight
+		font-size: 13px
+		color: #48cbe8
+	&:-moz-placeholder
+		font-family: fira_sanslight
+		font-size: 13px
+		color: #48cbe8
+	&:-ms-input-placeholder
+		font-family: fira_sanslight
+		font-size: 13px
+		color: #48cbe8
+.contact__form--buttons
+	margin-top: 17px
+.contact__form--button
+	width: 137px
+	height: 33px
+	border-radius: 5px
+	border: none
+	color: white
+	background: none
+	font-size: 19px
+	background: $phone
+.contact__form--reset
+	width: 125px
+	background: #849db5
+.contact__form--button-wrap-submit
+	display: inline-block
+	width: 137px
+	height: 33px
+	background: $contacts_header
+	border-radius: 5px
+	padding-bottom: 2px
+.contact__form--button--wrap-reset
+	display: inline-block
+	float: right
+	width: 125px
+	height: 33px
+	background: #687b8f
+	border-radius: 5px
+	padding-bottom: 2px
 
 @import header
 @import footer
