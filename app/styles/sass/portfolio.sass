@@ -54,34 +54,49 @@ body
 .work-list__item
 	display: inline-block
 	float: left
-	margin: 11px 16px 32px 16px
+	margin: 11px 19px 32px 16px
 	list-style: none
-	width: 180px
+	width: 178px
 	height: 198px
-.work-list__item--link
-	display: block
+.work-list__item--block
+	position: relative
 	width: 100%
-	height: 127px
-	border: 1px solid #3ba8c0
+	height: 125px
+	border: 2px solid #3ba8c0
 	border-radius: 5px
 	overflow: hidden
 	&:hover
 		background: #3d8eb9
-.work-list__item--image
-	&:hover
-		opacity: 0.2
 .work-list__item__tooltip
-	display: inline-block
+	position: absolute
+	top: 0
+	left: 0
+	text-align: center
+	width: 100%
+	line-height: 125px
+	padding-top: 1px
+	padding-right: 4px
 	opacity: 0
 	&:hover
 		opacity: 1
+.work-list__item--link
+	display: inline-block
+	font-size: 12px
+	border: 2px solid red
+	border-radius: 5px
+	width: 62px
+	font-family: fira_sansbook
+	line-height: 17px
+	color: red
+
+	
 .work-list__item--address
 	display: block
 	font-family: fira_sanslight_italic
 	font-size: 13px
 	text-decoration: none
 	padding-top: 6px
-	padding-right: 5px
+	padding-right: 4px
 	text-align: center
 	color: #4eaec4
 .work-list__item--decription
@@ -89,7 +104,7 @@ body
 	font-family: fira_sanslight
 	font-size: 15px
 	text-align: center
-	padding: 9px 5px
+	padding: 9px 5px 9px 7px
 	line-height: 16px
 .work-list__new-item
 	height: 127px
