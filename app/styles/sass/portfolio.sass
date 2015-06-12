@@ -1,0 +1,114 @@
+$content_bckg: #eff3f7
+$hover: #3ba8c0
+$font_color: #555f67
+$menu_font_color: #959aa8
+$contacts_header: #3ba8c0
+$mail: #41b9d4
+$phone: #48cbe8
+$skype: #51daf8
+$block: 650px
+$content: 960px
+$social_icon_size: 47px
+$header_height: 116px
+$footer_height: 77px
+$side_elements_width: 250px
+
+
+html,
+body,
+.wrap
+	height: 100%
+body > .wrap
+	height: auto
+	min-height: 100%
+.content
+	padding-top: 39px
+	padding-bottom: 77px
+	width: $content
+	margin: 0 auto
+body
+	color: $font_color
+	// background: url('../images/comppattern2.png')
+
+.portfolio
+	display: inline-block
+	margin-left: 60px
+	border-radius: 5px
+	overflow: hidden
+	width: 650px
+	height: 840px
+	// background: $content_bckg
+.portfolio__header
+	margin: 0
+	color: $hover
+	display: inline-block
+	font-family: fira_sanslight
+	font-size: 27px
+	padding: 22px 26px 18px 25px
+	line-height: 27px
+	border-bottom: 2px solid $hover
+.work-list
+	padding: 0
+	padding-left: 5px
+.work-list__item
+	display: inline-block
+	float: left
+	margin: 10px 16px 32px 16px
+	list-style: none
+	width: 180px
+	height: 198px
+.work-list__item--image
+	width: 100%
+	height: 128px
+	border: 1px solid #3ba8c0
+	border-radius: 5px
+.work-list__item--link
+	display: block
+	font-family: fira_sanslight_italic
+	font-size: 13px
+	text-decoration: none
+	padding-top: 4px
+	text-align: center
+.work-list__item--decription
+	margin: 0
+	font-family: fira_sanslight
+	font-size: 15px
+	text-align: center
+	padding: 8px 5px
+	line-height: 16px
+
+@import header
+@import footer
+@import menu
+@import contacts
+
+.gradient--border
+	height: 3px
+.gradient--border__left,
+.gradient--border__right
+	height: 100%
+	width: 50%
+	display: inline-block
+	float: left
+	background: linear-gradient(270deg, #1c667a, #e7eff3)
+.gradient--border__right
+	float: right
+	background: linear-gradient(90deg, #1c667a , #e7eff3)
+.sidebar
+	width: $side_elements_width
+	display: inline-block
+	float: left
+
+.cf:before,
+.cf:after 
+    content: " "
+    display: table
+
+.cf:after
+    clear: both
+
+.mockup-overlay
+	top: 0
+	position: absolute
+	z-index: -1
+	opacity: 0.4
