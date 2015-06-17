@@ -28,17 +28,17 @@ body > .wrap
 	margin: 0 auto
 body
 	color: $font_color
-	background: url('../images/comppattern2.png')
+	// background: url('../images/comppattern2.png')
 
 .portfolio
 	display: inline-block
 	margin-left: 60px
 	margin-bottom: 39px
 	border-radius: 5px
-	overflow: hidden
+	// overflow: hidden
 	width: 650px
-	height: 840px
-	background: $content_bckg
+	min-height: 840px
+	// background: $content_bckg
 .portfolio__header
 	margin: 0
 	color: $hover
@@ -53,11 +53,11 @@ body
 	padding-left: 5px
 .work-list__item
 	display: inline-block
-	float: left
-	margin: 11px 19px 32px 16px
+	margin: 11px 19px 24px 16px
 	list-style: none
 	width: 178px
-	height: 198px
+	// height: 198px
+	vertical-align: top
 .work-list__item--block
 	position: relative
 	width: 100%
@@ -65,8 +65,6 @@ body
 	border: 2px solid #3ba8c0
 	border-radius: 5px
 	overflow: hidden
-	&:hover
-		background: #3d8eb9
 .work-list__item__tooltip
 	position: absolute
 	top: 0
@@ -76,10 +74,12 @@ body
 	line-height: 125px
 	padding-top: 1px
 	padding-right: 4px
-	opacity: 0
 	&:hover
+		background:	rgba(61, 142, 185, 0.7)
+	&:hover .work-list__item--link
 		opacity: 1
 .work-list__item--link
+	opacity: 0
 	display: inline-block
 	font-size: 12px
 	border: 2px solid white
@@ -89,7 +89,6 @@ body
 	line-height: 17px
 	color: white
 
-	
 .work-list__item--address
 	display: block
 	font-family: fira_sanslight_italic
@@ -107,10 +106,15 @@ body
 	padding: 9px 5px 9px 7px
 	line-height: 16px
 .work-list__new-item
+	display: inline-block
 	height: 127px
 	border: 1px dashed #3ba8c0
 	border-radius: 5px
-	background: #edf8fc
+	margin: 11px 19px 24px 16px
+	width: 178px
+	// background: #edf8fc
+	&:hover .work-list__new-item__icon
+		top: 30px
 .work-list__new-item__text
 	margin: 0
 	font-family: fira_sanslight
@@ -123,8 +127,6 @@ body
 	position: relative
 	top: 34px
 	left: 75px
-	&:hover
-		top: 30px
 a
 	text-decoration: none
 
