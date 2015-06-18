@@ -21,11 +21,12 @@ var paths = {
         'app/styles/sass/contact.sass',
         'app/styles/sass/portfolio.sass',
         'app/styles/sass/login.sass'],
-  html: ['app/*.html']
+  html: ['app/*.html'],
+  js: ['app/scripts/*.js']
 }
 
-gulp.task('production', ['bower', 'sass', 'html', 'images', 'fav', 'fonts'])
-gulp.task('default', ['bower', 'sass', 'html', 'images', 'fav', 'fonts', 'watch']);
+gulp.task('production', ['bower', 'sass', 'html', 'images', 'js', 'fav', 'fonts'])
+gulp.task('default', ['bower', 'sass', 'html', 'images', 'js', 'fav', 'fonts', 'watch']);
 gulp.task('clean', function(){
   gulp.src('dist', {
     read: false
@@ -60,6 +61,10 @@ gulp.task('bower', function () {
 gulp.task('images', function(){
   gulp.src(paths.images)
   .pipe(gulp.dest('dist/images/'));
+});
+gulp.task('js', function(){
+  gulp.src(paths.js)
+  .pipe(gulp.dest('dist/scripts/'));
 });
 gulp.task('fav', function(){
   gulp.src(paths.fav)
