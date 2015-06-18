@@ -160,11 +160,44 @@
 		<div class="copyright">&copy; 2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его</div>
 	</div>
 </footer>
+<div class="overlay"></div>
+	<div id="modal">
+		<h2 class="modal--header">Добавление проекта</h2>
+		<div class="close-icon__button"><img src="images/close.png" alt=""></div>
+		<form action="" class="modal--form">
+			<div class="modal--field">
+				<h3 class="modal--field__name">Название проекта</h3>
+				<input type="text" placeholder="Введите название" class="modal--field__input">
+			</div>
+			<div class="modal--field">
+				<h3 class="modal--field__name">Картинка проекта</h3>
+				<label class="modal--field__file">
+					<div class="modal--field__placeholder">
+						Загрузите изображение
+					</div>
+					<div class="modal--field__button">
+						<img class="upload-image" src="images/upload.png" alt="upload file">
+					</div>
+				<input type="file" class="modal--field__file-input" onchange="this.previousSibling.previousSibling.innerHTML = this.value">
+				</label>
+			</div>
+			<div class="modal--field">
+				<h3 class="modal--field__name modal--field__name__url">URL проекта</h3>
+				<input type="text" class="modal--field__input" placeholder="Добавьте ссылку">
+			</div>
+			<div class="modal--field">
+				<h3 class="modal--field__name">Описание</h3>
+				<textarea class="modal--field__input modal--field__input__description" placeholder="Пара слов о Вашем проекте"></textarea>
+			</div>
+			<input type="submit" value="Добавить" class="modal--submit">
+		</form>
+	</div>
 <!-- <div class="mockup-overlay">
-	<img src="images/mockup_portfolio.jpg">
+	<img src="images/mockup_portfolio_modal.jpg">
 </div> -->
 <!-- bower:js -->
 <script src="../bower_components/jquery/dist/jquery.js"></script>
 <!-- endbower -->
+<script type="text/javascript" src="../app/scripts/main.js"></script>
 </body>
 </html>

@@ -50,7 +50,7 @@ gulp.task('sass', function() {
 });
 
 gulp.task('bower', function () {
-  gulp.src('./app/index.html')
+  gulp.src('./app/*.html')
     .pipe(wiredep({
       directory: "bower_components"
     }))
@@ -74,12 +74,4 @@ gulp.task('watch', function(){
   livereload.listen();
   gulp.watch('app/styles/sass/*.sass', ['sass']).on('change', livereload.changed);
   gulp.watch('app/*.html', ['html']).on('change', livereload.changed);
-});
-
-gulp.task('bower', function () {
-  gulp.src('./app/index.html')
-    .pipe(wiredep({
-      directory: "bower_components"
-    }))
-    .pipe(gulp.dest('./app'));
 });

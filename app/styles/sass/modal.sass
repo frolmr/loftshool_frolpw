@@ -1,0 +1,135 @@
+.overlay
+	display: none
+	position: fixed
+	z-index: 10
+	opacity: 0.5
+	top: 0
+	right: 0
+	left: 0
+	bottom: 0
+	background: #58697a
+
+#modal
+	display: none
+	position: fixed
+	z-index: 11
+	width: 362px
+	height: 493px
+	margin: -250px 0 0 -181px
+	top: 50%
+	left: 50%
+	background: #eff3f7
+	overflow: hidden
+	border-radius: 5px
+	box-shadow: 0px 6px 12.48px 0.52px rgba(13, 16, 7, 0.35)
+.modal--header
+	display: inline-block
+	width: 100%
+	margin: 0
+	font-family: fira_sansextralight
+	font-size: 25px
+	height: 44px
+	line-height: 44px
+	padding-left: 14px
+	color: white
+	background: #48cbe8
+	border-bottom: 9px solid #67dffa
+.close-icon__button
+	cursor: pointer
+	position: absolute
+	top: 8px
+	right: 12px
+.modal--form
+	width: 320px
+	margin: 0 auto
+.modal--field__name
+	margin: 0
+	font-family: fira_sanslight
+	font-size: 17px
+	color: #959aa8
+	margin-top: 2px
+	margin-bottom: 2px
+.modal--field__input
+	width: 308px
+	height: 38px
+	border: 1px solid #48cbe8
+	border-radius: 4px
+	font-size: 13px
+	font-family: fira_sanslight
+	color: #959aa8
+	background: none
+	margin-bottom: 3px
+	overflow: hidden
+	padding-left: 8px
+	&::-webkit-input-placeholder 
+		font-family: fira_sanslight
+		font-size: 13px
+		color: #48cbe8
+	&::-moz-placeholder
+		font-family: fira_sanslight
+		font-size: 13px
+		color: #48cbe8
+	&:-moz-placeholder
+		font-family: fira_sanslight
+		font-size: 13px
+		color: #48cbe8
+	&:-ms-input-placeholder
+		font-family: fira_sanslight
+		font-size: 13px
+		color: #48cbe8
+	&:focus
+		color: #48cbe8
+		font-size: 13px
+
+.modal--field__file
+	display: inline-block
+	border: 1px solid #48cbe8
+	border-radius: 4px
+	font-size: 13px
+	font-family: fira_sanslight
+	color: #959aa8
+	overflow: hidden
+	cursor: pointer
+	// background: none
+.modal--field__file-input
+	display: none
+.modal--field__button
+	width: 50px
+	height: 40px
+	display: inline-block
+	background: #48cbe8
+.upload-image
+	position: relative
+	top: 7px
+	left: 10px
+.modal--field__placeholder
+	display: inline-block
+	line-height: 38px
+	width: 259px
+	height: 100%
+	margin-left: 9px
+	color: #48cbe8
+.modal--submit
+	display: block
+	margin: 0 auto
+	margin-top: 8px
+	width: 140px
+	height: 30px
+	border: none
+	border-radius: 5px
+	background: #48cbe8
+	color: white
+	font-family: fira_sanslight
+	box-shadow: 0 2px 0 0 $contacts_header
+	&:hover
+		box-shadow: none
+		margin-top: 12px
+	&:active
+		padding-top: 4px
+		box-shadow: inset 0 2px 0 0 $contacts_header
+.modal--field__name__url
+	margin-bottom: 0
+.modal--field__input__description
+	resize: none
+	height: 98px
+	padding-top: 8px
