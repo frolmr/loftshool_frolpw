@@ -79,4 +79,5 @@ gulp.task('watch', function(){
   livereload.listen();
   gulp.watch('app/styles/sass/*.sass', ['sass']).on('change', livereload.changed);
   gulp.watch('app/*.html', ['html']).on('change', livereload.changed);
+  gulp.watch('app/scripts/*.js', ['js']).on('change', livereload.changed);
 });

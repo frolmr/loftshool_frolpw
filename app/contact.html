@@ -101,26 +101,26 @@
 				<h1 class="contact__header--inner--header">У вас интересный проект? Напишите мне</h1>
 			</div>
 		</div>
-		<form action="" class="contact__form">
-			<div class="contact__form--wrap">
+		<div class="contact__form--wrap">
+			<form action="" class="contact__form">
 				<div class="contact__form--name">
 					<h2 class="contact__form--header">Имя</h2>
-					<input type="text" class="contact__form--field contact__form--input" placeholder="Как к Вам обращаться">
+					<input type="text" class="contact__form--field contact__form--input validate" placeholder="Как к Вам обращаться">
 				</div>
 				<div class="contact__form--email">
 					<h2 class="contact__form--header">Email</h2>
-					<input type="text" class="contact__form--field contact__form--input contact__form--input-email" placeholder="Куда мне писать">
+					<input type="text" class="contact__form--field contact__form--input contact__form--input-email validate" placeholder="Куда мне писать">
 				</div>
 				<div class="contact__form--message">
 					<h2 class="contact__form--header">Сообщение</h2>
-					<textarea class="contact__form--field contact__form--text"placeholder="Кратко в чем суть"></textarea>
+					<textarea class="contact__form--field contact__form--text validate" placeholder="Кратко в чем суть"></textarea>
 				</div>
 				<div class="contact__form--code">
 					<h3 class="contact__form--code-header">Введите код, указанный на картинке</h3>
 					<div class="contact__form--captcha">
 						<!-- <img src="captcha.php?sid=<?php echo rand(10000, 99999); ?>"/> -->
 					</div>
-					<input class="contact__form--field contact__form--code-field" placeholder="Введите код">
+					<input class="contact__form--field contact__form--code-field validate" placeholder="Введите код">
 				</div>
 				<div class="contact__form--buttons">
 					<!-- <div class="contact__form--button-wrap-submit"> -->
@@ -130,9 +130,29 @@
 					<input type="reset" value="Очистить" class="contact__form--button contact__form--reset">
 					<!-- </div> -->
 				</div>
-			</div>
-		</form>
+			</form>
+		</div>
 	</section>
+	<!-- <div class="tooltip tooltip_left">
+		<div class="tooltip__inner">
+			Содержание
+		</div>
+	</div>
+	<div class="tooltip tooltip_right">
+		<div class="tooltip__inner">
+			Содержание
+		</div>
+	</div>
+	<div class="tooltip tooltip_left">
+		<div class="tooltip__inner">
+			Содержание
+		</div>
+	</div>
+	<div class="tooltip tooltip_right">
+		<div class="tooltip__inner">
+			Содержание
+		</div>
+	</div> -->
 	</div>
 </div>
 <footer class="page-footer">
@@ -151,5 +171,6 @@
 <!-- bower:js -->
 <script src="../bower_components/jquery/dist/jquery.js"></script>
 <!-- endbower -->
+<script type="text/javascript" src="scripts/main.js"></script>
 </body>
 </html>
