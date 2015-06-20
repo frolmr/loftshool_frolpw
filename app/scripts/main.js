@@ -1,13 +1,4 @@
-// 	$('.contact__form').on('submit', function(e) {
-// 		e.preventDefault();
-// 		$('.contact__form--input').tooltip({
-// 			position : 'left',
-// 			content : 'fuck you!'
-// 		});
-// 	});
-	
 $(document).ready(function (){
-	// event.preventDefault;
 	eventListener();
 });
 
@@ -15,13 +6,13 @@ function eventListener () {
 	$('.contact__form').on('submit', pushSubmit('form'));
 	$('a.work-list__new-item').on('click', showModal);
 	$('.close-icon__button, .overlay').on('click', hideModal);
+	$('textarea, input').on('keypress', removeTooltiped);
 }
 
 function showModal(){
 	event.preventDefault();
 	$('.overlay').fadeIn(400, function() {
 		$('#modal').show().animate({opacity: 1}, 200);
-		console.log('modal appeared');
 	});
 }
 
@@ -29,7 +20,6 @@ function hideModal(){
 	$('#modal').animate({opacity: 0}, 200, function() { 
 		$(this).hide();
 		$('.overlay').fadeOut(400);
-		console.log("modal disappeared")
 	});
 }
 
@@ -41,7 +31,6 @@ function dataValidation(form) {
 				inputValue = input.val();
 			if (!inputValue) {
 				putTooltip(input);
-				// console.log(input);
 			};
 		});
 };
@@ -49,12 +38,22 @@ function dataValidation(form) {
 function putTooltip(field){
 	var tooltipMessage = $(field).data('error-message'),
 		tooltipSide = $(field).data('tooltip-side');
-		console.log(tooltipMessage);
-		console.log(tooltipSide);
 		$(field).tooltip({
 			position: tooltipSide,
 			content: tooltipMessage
 		});
+};
+
+function removeTooltiped() {
+	var tooltips = $('body').find('.tooltip__inner'),
+		message = $(this).data('error-message')
+		$.each(tooltips, function(i, value){
+			var input = $(value)
+			if (message === value.innerText) {
+				tooltips[i].remove();
+			};
+		});
+		$(this).removeClass('tooltiped');
 };
 
 function pushSubmit(form){
@@ -62,7 +61,7 @@ function pushSubmit(form){
 		e.preventDefault();
 		dataValidation(form);
 	});
-}
+};
 
 $.fn.tooltip = function(options){
 
@@ -90,6 +89,7 @@ $.fn.tooltip = function(options){
 
 	$('.contact__form--reset').on('click', function(){
 		$('.tooltip').remove();
+		$('form').find('input, textarea').removeClass('tooltiped');
 	});
 
 	$(window).on('resize', function(){
