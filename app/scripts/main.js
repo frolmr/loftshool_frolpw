@@ -1,28 +1,68 @@
-$(document).ready(function () {
-	$('a.work-list__new-item').click(function(event) {
-		event.preventDefault();
-		$('.overlay').fadeIn(400, function() {
-				$('#modal').show().animate({opacity: 1}, 200);
-		});
-	});
+// 	$('.contact__form').on('submit', function(e) {
+// 		e.preventDefault();
+// 		$('.contact__form--input').tooltip({
+// 			position : 'left',
+// 			content : 'fuck you!'
+// 		});
+// 	});
 	
-	$('.close-icon__button, .overlay').click(function() { 
-		$('#modal').animate({opacity: 0}, 200, function() { 
-					$(this).hide();
-					$('.overlay').fadeOut(400);
-			});
-	});
-
-	$('.contact__form').on('submit', function(e) {
-		e.preventDefault();
-		$('.validate').tooltip({
-			position : 'left',
-			content : 'fuck you!'
-		});
-	});
-	
+$(document).ready(function (){
+	// event.preventDefault;
+	eventListener();
 });
 
+function eventListener () {
+	$('.contact__form').on('submit', pushSubmit('form'));
+	$('a.work-list__new-item').on('click', showModal);
+	$('.close-icon__button, .overlay').on('click', hideModal);
+}
+
+function showModal(){
+	event.preventDefault();
+	$('.overlay').fadeIn(400, function() {
+		$('#modal').show().animate({opacity: 1}, 200);
+		console.log('modal appeared');
+	});
+}
+
+function hideModal(){
+	$('#modal').animate({opacity: 0}, 200, function() { 
+		$(this).hide();
+		$('.overlay').fadeOut(400);
+		console.log("modal disappeared")
+	});
+}
+
+function dataValidation(form) {
+	var formFields = $(form).find('input, textarea'),
+		isValid = true;
+		$.each(formFields, function(i, value){
+			var input = $(value),
+				inputValue = input.val();
+			if (!inputValue) {
+				putTooltip(input);
+				// console.log(input);
+			};
+		});
+};
+
+function putTooltip(field){
+	var tooltipMessage = $(field).data('error-message'),
+		tooltipSide = $(field).data('tooltip-side');
+		console.log(tooltipMessage);
+		console.log(tooltipSide);
+		$(field).tooltip({
+			position: tooltipSide,
+			content: tooltipMessage
+		});
+};
+
+function pushSubmit(form){
+	$('form').on('submit', function(e) {
+		e.preventDefault();
+		dataValidation(form);
+	});
+}
 
 $.fn.tooltip = function(options){
 

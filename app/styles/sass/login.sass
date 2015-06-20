@@ -40,7 +40,7 @@ body,
 	width: 590px
 	height: 484px
 	overflow: hidden
-	background: $phone
+	background: $content_bckg
 	margin: 0 auto
 	margin-top: 12px
 	border-radius: 5px
@@ -55,12 +55,15 @@ body,
 	margin: 0
 	font-size: 40px
 	color: white
+	background: $phone
 .entrance__divider
 	height: 15px
 	background: #67dffa
 .entrance__form
 	height: 377px
-	background: $content_bckg
+	width: 404px
+	margin: 0 auto
+	// background: $content_bckg
 .pass__title--header,
 .login__title--header
 	margin: 0
@@ -76,15 +79,16 @@ body,
 	margin-top: 1px
 .pass__field--input,
 .login__field--input
-	color: #48cbe8
-	display: block
-	margin: 0 auto
-	width: 404px
+	// color: #48cbe8
+	// display: block
+	// margin: 0 auto
+	width: 100%
 	height: 58px
 	border: 1px solid $phone
 	border-radius: 4px
 	// background: none
 	padding-left: 17px
+	padding-right: -17px
 	font-size: 17px
 	&::-webkit-input-placeholder 
 		color: #48cbe8
@@ -141,6 +145,8 @@ body,
 	display: inline-block
 	line-height: $footer_height
 	vertical-align: middle
+
+@import tooltips
 
 .gradient--border
 	height: 3px

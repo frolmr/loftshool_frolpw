@@ -1,0 +1,54 @@
+.tooltip
+	display: inline-block
+	position: absolute
+	opacity: 0
+	transition: opacity .3s
+	z-index: 100
+.tooltip__inner
+	max-width: 200px
+	padding: 0 10px
+	color: white
+	background: #f97e76
+	text-align: center
+	border-radius: 3px
+	white-space: nowrap
+	line-height: 26px
+	&:after
+		content: ""
+		display: block
+		position: absolute
+		width: 0
+		height: 0
+		border: 5px solid transparent
+.tooltip_right,
+.tooltip_left
+	padding: 0 5px
+	.tooltip__inner
+		&:after
+			top: 50%
+			margin-top: -5px
+
+$positions: left, right
+
+@each $position in $positions 
+	$length: length($positions)
+	$opposite: nth($positions, ($length - index($positions, $position)) + 1)
+	
+	.tooltip_#{$position}
+		.tooltip__inner
+			&:after
+				#{$opposite} : 0
+				border-#{$position}-color: #f97e76
+				border-#{$opposite}-width: 0px
+
+.tooltiped
+	border-color: #f97e76
+	background-color: rgba(249, 126, 118, 0.329);
+	&::-webkit-input-placeholder 
+		color: #8ab4c3
+	&::-moz-placeholder
+		color: #8ab4c3
+	&:-moz-placeholder
+		color: #8ab4c3
+	&:-ms-input-placeholder
+		color: #8ab4c3

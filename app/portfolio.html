@@ -167,7 +167,7 @@
 		<form action="" class="modal--form">
 			<div class="modal--field">
 				<h3 class="modal--field__name">Название проекта</h3>
-				<input type="text" placeholder="Введите название" class="modal--field__input">
+				<input type="text" placeholder="Введите название" data-error-message="введите название" data-tooltip-side="left" class="modal--field__input">
 			</div>
 			<div class="modal--field">
 				<h3 class="modal--field__name">Картинка проекта</h3>
@@ -178,16 +178,16 @@
 					<div class="modal--field__button">
 						<img class="upload-image" src="images/upload.png" alt="upload file">
 					</div>
-				<input type="file" class="modal--field__file-input" onchange="this.previousSibling.previousSibling.innerHTML = this.value">
+				<input type="file" class="modal--field__file-input" data-error-message="изображение" data-tooltip-side="left" onchange="this.previousSibling.previousSibling.innerHTML = this.value">
 				</label>
 			</div>
 			<div class="modal--field">
 				<h3 class="modal--field__name modal--field__name__url">URL проекта</h3>
-				<input type="text" class="modal--field__input" placeholder="Добавьте ссылку">
+				<input type="text" class="modal--field__input" data-error-message="ссылка на проект" data-tooltip-side="left" placeholder="Добавьте ссылку">
 			</div>
 			<div class="modal--field">
 				<h3 class="modal--field__name">Описание</h3>
-				<textarea class="modal--field__input modal--field__input__description" placeholder="Пара слов о Вашем проекте"></textarea>
+				<textarea class="modal--field__input modal--field__input__description" data-error-message="описание проекта" data-tooltip-side="left" placeholder="Пара слов о Вашем проекте"></textarea>
 			</div>
 			<input type="submit" value="Добавить" class="modal--submit">
 		</form>

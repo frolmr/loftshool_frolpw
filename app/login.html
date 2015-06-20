@@ -26,13 +26,13 @@
 						<h2 class="login__title--header">Логин</h2>
 					</div>
 					<div class="login__field">
-						<input class="login__field--input" type="text" placeholder="Введите логин">
+						<input class="login__field--input" data-error-message="введите логин" data-tooltip-side="left" type="text" placeholder="Введите логин">
 					</div>
 					<div class="pass__title">
 						<h2 class="pass__title--header">Пароль</h2>
 					</div>
 					<div class="pass__field">
-						<input class="pass__field--input" type="password" placeholder="Введите пароль">
+						<input class="pass__field--input" type="password" data-error-message="введите пароль" data-tooltip-side="left" placeholder="Введите пароль">
 					</div>					
 						<button class="account-enter">Войти</button>				
 				</form>
@@ -57,5 +57,6 @@
 <!-- bower:js -->
 <script src="../bower_components/jquery/dist/jquery.js"></script>
 <!-- endbower -->
+<script type="text/javascript" src="scripts/main.js"></script>
 </body>
 </html>

@@ -105,22 +105,22 @@
 			<form action="" class="contact__form">
 				<div class="contact__form--name">
 					<h2 class="contact__form--header">Имя</h2>
-					<input type="text" class="contact__form--field contact__form--input validate" placeholder="Как к Вам обращаться">
+					<input type="text" class="contact__form--field contact__form--input" data-error-message="Вы не ввели имя" data-tooltip-side="left" data-validation="name" placeholder="Как к Вам обращаться">
 				</div>
 				<div class="contact__form--email">
 					<h2 class="contact__form--header">Email</h2>
-					<input type="text" class="contact__form--field contact__form--input contact__form--input-email validate" placeholder="Куда мне писать">
+					<input type="text" class="contact__form--field contact__form--input contact__form--input-email" data-error-message="Вы не ввели email" data-tooltip-side="right" data-validation="email" placeholder="Куда мне писать">
 				</div>
 				<div class="contact__form--message">
 					<h2 class="contact__form--header">Сообщение</h2>
-					<textarea class="contact__form--field contact__form--text validate" placeholder="Кратко в чем суть"></textarea>
+					<textarea class="contact__form--field contact__form--text" data-error-message="Ваш вопрос" data-tooltip-side="left" data-validation="description" placeholder="Кратко в чем суть"></textarea>
 				</div>
 				<div class="contact__form--code">
 					<h3 class="contact__form--code-header">Введите код, указанный на картинке</h3>
 					<div class="contact__form--captcha">
 						<!-- <img src="captcha.php?sid=<?php echo rand(10000, 99999); ?>"/> -->
 					</div>
-					<input class="contact__form--field contact__form--code-field validate" placeholder="Введите код">
+					<input class="contact__form--field contact__form--code-field" data-error-message="Вы не ввели код" data-tooltip-side="right" data-validation="captcha" placeholder="Введите код">
 				</div>
 				<div class="contact__form--buttons">
 					<!-- <div class="contact__form--button-wrap-submit"> -->
