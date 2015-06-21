@@ -4,15 +4,16 @@ $(document).ready(function (){
 
 function eventListener () {
 	$('.contact__form').on('submit', pushSubmit('form'));
-	$('a.work-list__new-item').on('click', showModal);
+	$('.work-list__new-item').on('click', showModal);
 	$('.close-icon__button, .overlay').on('click', hideModal);
 	$('textarea, input').on('keypress', removeTooltiped);
 }
 
-function showModal(){
+function showModal(event){
 	event.preventDefault();
 	$('.overlay').fadeIn(400, function() {
-		$('#modal').show().animate({opacity: 1}, 200);
+		$('#modal').show().animate({opacity: 1}, 400);
+		$('.tooltip').show();
 	});
 }
 
@@ -20,13 +21,13 @@ function hideModal(){
 	$('#modal').animate({opacity: 0}, 200, function() { 
 		$(this).hide();
 		$('.overlay').fadeOut(400);
+		$('.tooltip').hide();
 	});
 }
 
-function dataValidation(form) {
-	var formFields = $(form).find('input, textarea'),
-		isValid = true;
-		$.each(formFields, function(i, value){
+function tooltipEmptyField(form) {
+	var formFields = $(form).find('input, textarea');
+		formFields.each(function(i, value){
 			var input = $(value),
 				inputValue = input.val();
 			if (!inputValue) {
@@ -37,29 +38,32 @@ function dataValidation(form) {
 
 function putTooltip(field){
 	var tooltipMessage = $(field).data('error-message'),
-		tooltipSide = $(field).data('tooltip-side');
+		tooltipSide = $(field).data('tooltip-side')
 		$(field).tooltip({
 			position: tooltipSide,
 			content: tooltipMessage
 		});
 };
 
-function removeTooltiped() {
+function removeTooltiped(field) {
 	var tooltips = $('body').find('.tooltip__inner'),
 		message = $(this).data('error-message')
-		$.each(tooltips, function(i, value){
-			var input = $(value)
+		tooltips.each(function(i, value){
 			if (message === value.innerText) {
-				tooltips[i].remove();
+				$(value).remove();
 			};
 		});
 		$(this).removeClass('tooltiped');
 };
 
+function formValidation (form){
+	
+};
+
 function pushSubmit(form){
-	$('form').on('submit', function(e) {
-		e.preventDefault();
-		dataValidation(form);
+	$('form').on('submit', function(event) {
+		event.preventDefault();
+		tooltipEmptyField(form);
 	});
 };
 

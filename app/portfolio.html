@@ -139,12 +139,8 @@
 				<p class="work-list__item--decription">Информация о проекте 4 превью 2 строки....</p>
 			</li>
 			<a href="" class="work-list__new-item">
-			<!-- <li class="work-list__item"> -->
-				<!-- <a href=""> -->
-					<img src="images/new-project-icon.png" alt="new-project-icon" class="work-list__new-item__icon">
-					<p class="work-list__new-item__text">Добавить проект</p>
-				<!-- </a> -->
-			<!-- </li> -->
+				<img src="images/new-project-icon.png" alt="new-project-icon" class="work-list__new-item__icon">
+				<p class="work-list__new-item__text">Добавить проект</p>
 			</a>
 		</ul>
 	</section>
@@ -163,7 +159,7 @@
 <div class="overlay"></div>
 	<div id="modal">
 		<h2 class="modal--header">Добавление проекта</h2>
-		<div class="close-icon__button"><img src="images/close.png" alt=""></div>
+		<div class="close-icon__button"><img id="close_button" src="images/close.png" alt=""></div>
 		<form action="" class="modal--form">
 			<div class="modal--field">
 				<h3 class="modal--field__name">Название проекта</h3>
@@ -171,15 +167,13 @@
 			</div>
 			<div class="modal--field">
 				<h3 class="modal--field__name">Картинка проекта</h3>
-				<label class="modal--field__file">
-					<div class="modal--field__placeholder">
-						Загрузите изображение
-					</div>
-					<div class="modal--field__button">
+				<div class="file_upload">
+					<button class="modal--field__button">
 						<img class="upload-image" src="images/upload.png" alt="upload file">
-					</div>
-				<input type="file" class="modal--field__file-input" data-error-message="изображение" data-tooltip-side="left" onchange="this.previousSibling.previousSibling.innerHTML = this.value">
-				</label>
+					</button>
+					<div class="modal--field__placeholder">Загрузите изображение</div>
+					<input type="file" class="modal--field__file-input" data-error-message="изображение" data-tooltip-side="left">
+				</div>
 			</div>
 			<div class="modal--field">
 				<h3 class="modal--field__name modal--field__name__url">URL проекта</h3>
