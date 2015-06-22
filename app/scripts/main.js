@@ -19,7 +19,7 @@ function handleFileInput(){
 }
 
 function showModal(event){
-	event.preventDefault();
+	event.preventDefault ? event.preventDefault() : event.returnValue = false;
 	$()
 	$('.overlay').fadeIn(400, function() {
 		$('#modal').show().animate({opacity: 1}, 400);
