@@ -194,6 +194,6 @@ $.fn.tooltip = function(options){
 };
 
 $(document).ready(function (){
-	$(document).find('.footer__content').css('background-color','red');
+	$('input, textarea').placeholder();
 	attachEventHandlers();
 });
