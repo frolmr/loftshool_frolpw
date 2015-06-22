@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "dependencies": {
     "normalize.css": "~3.0.3",
-    "jquery": "~2.1.4",
+    "jquery": "~1.11.3",
     "selectivizr": "~1.0.2",
     "modernizr": "~2.8.3"
   }

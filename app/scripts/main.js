@@ -1,7 +1,3 @@
-$(document).ready(function (){
-	attachEventHandlers();
-});
-
 function attachEventHandlers () {
 	$('.contact__form').on('submit', pushSubmit('form'));
 	$('.work-list__new-item').on('click', showModal);
@@ -196,3 +192,8 @@ $.fn.tooltip = function(options){
 			.css('opacity', '1');
 	}
 };
+
+$(document).ready(function (){
+	$(document).find('.footer__content').css('background-color','red');
+	attachEventHandlers();
+});
