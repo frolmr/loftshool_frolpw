@@ -96,7 +96,7 @@ function removeTooltiped(field) {
 
 function pushSubmit(form){
 	$('form').on('submit', function(event) {
-		event.preventDefault();
+		event.preventDefault ? event.preventDefault() : event.returnValue = false;
 		tooltipEmptyField(form);
 	});
 }
