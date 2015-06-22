@@ -2,11 +2,13 @@ function attachEventHandlers () {
 	$('.contact__form').on('submit', pushSubmit('form'));
 	$('.work-list__new-item').on('click', showModal);
 	$('.close-icon__button, .overlay').on('click', hideModal);
+	$('.close-button, .overlay').on('click', hideSuccessMessage);
 	$('textarea, input').on('keypress', removeTooltiped);
 	$('input[type=file]')
 		.on('change', removeTooltiped)
 		.on('change', removeFileTooltiped)
 		.on('change', handleFileInput);
+	$('.modal--form').on('submit', validateForm);
 }
 
 function handleFileInput(){
@@ -16,12 +18,10 @@ function handleFileInput(){
 
 function showModal(event){
 	event.preventDefault ? event.preventDefault() : (event.returnValue = false);
-	$()
 	$('.overlay').fadeIn(400, function() {
 		$('#modal').show().animate({opacity: 1}, 400);
 		$('.tooltip').show();
 	});
-	return false;
 }
 
 function hideModal(){
@@ -29,6 +29,12 @@ function hideModal(){
 		$(this).hide();
 		$('.overlay').fadeOut(400);
 		$('.tooltip').hide();
+	});
+}
+function hideSuccessMessage(){
+	$('#success').animate({opacity: 0}, 200, function() { 
+		$(this).hide();
+		$('.overlay').fadeOut(400);
 	});
 }
 
@@ -96,6 +102,19 @@ function pushSubmit(form){
 		event.preventDefault ? event.preventDefault() : event.returnValue;
 		tooltipEmptyField(form);
 	});
+}
+
+function validateForm(){
+	var errors = $('body').find('.tooltip__inner');
+	if (!errors.length) {
+		$('#modal').hide();
+		showSuccessMessage(event);
+	};
+}
+
+function showSuccessMessage(event){
+	event.preventDefault ? event.preventDefault() : (event.returnValue = false);
+	$('#success').show().animate({opacity: 1}, 400);
 }
 
 $.fn.tooltip = function(options){
