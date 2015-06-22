@@ -1,16 +1,26 @@
 $(document).ready(function (){
-	eventListener();
+	attachEventHandlers();
 });
 
-function eventListener () {
+function attachEventHandlers () {
 	$('.contact__form').on('submit', pushSubmit('form'));
 	$('.work-list__new-item').on('click', showModal);
 	$('.close-icon__button, .overlay').on('click', hideModal);
 	$('textarea, input').on('keypress', removeTooltiped);
+	$('input[type=file]')
+		.on('change', removeTooltiped)
+		.on('change', removeFileTooltiped)
+		.on('change', handleFileInput);
+}
+
+function handleFileInput(){
+	var txt = $(this).val().replace(/C:\\fakepath\\/i, '');
+	$(this).prev().text(txt);
 }
 
 function showModal(event){
 	event.preventDefault();
+	$()
 	$('.overlay').fadeIn(400, function() {
 		$('#modal').show().animate({opacity: 1}, 400);
 		$('.tooltip').show();
@@ -27,45 +37,69 @@ function hideModal(){
 
 function tooltipEmptyField(form) {
 	var formFields = $(form).find('input, textarea');
-		formFields.each(function(i, value){
-			var input = $(value),
-				inputValue = input.val();
-			if (!inputValue) {
-				putTooltip(input);
-			};
-		});
-};
+		
+	formFields.each(function(){
+		var input = $(this),
+		 	inputValue = input.val(),
+		 	isValid = true,
+		 	fileField = $(form).find('.modal--field__file-input'),
+		 	fileFieldPlaceholder = $(form).find('.modal--field__placeholder')
+
+		if (!inputValue) {
+			isValid = false;
+		}
+		else if (input.data("validation") == "email") {
+			isValid = validateEmail(inputValue);
+		}
+
+		if (!isValid) {
+			putTooltip(input);
+		}
+
+		if (fileField.hasClass('tooltiped')) {
+			fileFieldPlaceholder.addClass('tooltiped');
+		};
+	});
+}
+
+function validateEmail(email) {
+	var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+	return re.test(email);
+}
 
 function putTooltip(field){
 	var tooltipMessage = $(field).data('error-message'),
-		tooltipSide = $(field).data('tooltip-side')
+		tooltipSide = $(field).data('tooltip-side');
 		$(field).tooltip({
 			position: tooltipSide,
 			content: tooltipMessage
 		});
-};
+}
+function removeFileTooltiped(){
+	var fileField = $(document).find('.modal--field__file-input'),
+		fileFieldPlaceholder = $(document).find('.modal--field__placeholder');
 
+		if (!fileField.hasClass('tooltiped')) {
+			fileFieldPlaceholder.removeClass('tooltiped');
+		};
+}
 function removeTooltiped(field) {
 	var tooltips = $('body').find('.tooltip__inner'),
-		message = $(this).data('error-message')
-		tooltips.each(function(i, value){
-			if (message === value.innerText) {
-				$(value).remove();
-			};
-		});
-		$(this).removeClass('tooltiped');
-};
-
-function formValidation (form){
-	
-};
+		message = $(this).data('error-message');
+	tooltips.each(function(i, value){
+		if (message === value.innerText) {
+			$(value).remove();
+		}
+	});
+	$(this).removeClass('tooltiped');
+}
 
 function pushSubmit(form){
 	$('form').on('submit', function(event) {
 		event.preventDefault();
 		tooltipEmptyField(form);
 	});
-};
+}
 
 $.fn.tooltip = function(options){
 
@@ -97,12 +131,8 @@ $.fn.tooltip = function(options){
 	});
 
 	$(window).on('resize', function(){
-
-		var
-			tooltips = $('.tooltip');
-
-		var
-			tooltipsArray = [];
+		var tooltips = $('.tooltip');
+		var tooltipsArray = [];
 
 		tooltips.each(function(){
 			tooltipsArray.push($(this));
@@ -114,7 +144,6 @@ $.fn.tooltip = function(options){
 
 			_positionTooltip($(this), tooltipsArray[index], position);
 		});
-
 	});
 
 	function _positionTooltip(elem, tooltip, position) {
