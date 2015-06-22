@@ -19,7 +19,7 @@ function handleFileInput(){
 }
 
 function showModal(event){
-	event.preventDefault ? event.preventDefault() : event.returnValue = false;
+	event.preventDefault ? event.preventDefault() : event.returnValue;
 	$()
 	$('.overlay').fadeIn(400, function() {
 		$('#modal').show().animate({opacity: 1}, 400);
@@ -96,7 +96,7 @@ function removeTooltiped(field) {
 
 function pushSubmit(form){
 	$('form').on('submit', function(event) {
-		event.preventDefault ? event.preventDefault() : event.returnValue = false;
+		event.preventDefault ? event.preventDefault() : event.returnValue;
 		tooltipEmptyField(form);
 	});
 }
